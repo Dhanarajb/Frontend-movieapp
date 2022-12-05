@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {Auth0Provider} from '@auth0/auth0-react'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+    <Auth0Provider domain="dev-ajtxg7e2qewj232r.uk.auth0.com" clientId="J7Zx7vfjybTx3eFhLfz2K8ffDfsWlN6m" redirectUri={window.location.origin}>
     <App />
-  </React.StrictMode>
+    </Auth0Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
